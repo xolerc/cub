@@ -13,3 +13,6 @@ Interactive 3D cube experience with cross-window synchronization. Multiple brows
 
 ## How to open
 Open `index.html` in multiple browser windows and move them close together.
+
+## 🔗 Rasmiy portfolio
+Barcha XOLERIC loyihalari: **https://xolerc.github.io/mydrime/**

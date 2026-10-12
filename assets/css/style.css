@@ -1,0 +1,45 @@
+
+
+/* === index.html dan ajratildi (XOLERIC SEO) === */
+:root {
+    --primary: #00ff88;
+    --bg-color: #030303;
+    --danger: #ff0055;
+}
+body {
+    margin: 0; padding: 0; overflow: hidden; background-color: var(--bg-color);
+    font-family: 'Courier New', monospace; user-select: none;
+    -webkit-font-smoothing: antialiased;
+}
+#canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+
+/* PRO Glassmorphism UI */
+#ui-layer {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none;
+    padding: clamp(20px, 4vw, 40px); box-sizing: border-box; 
+    display: flex; flex-direction: column; justify-content: space-between;
+    opacity: 0; transform: scale(0.95); transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hud-panel {
+    background: rgba(5, 5, 5, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--primary);
+    padding: 20px 30px;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+.hud-top { align-self: flex-start; }
+.hud-bottom { align-self: flex-end; display: flex; flex-direction: column; gap: 15px; min-width: 250px; }
+.hud-row { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+
+.hud-text { color: rgba(255, 255, 255, 0.6); font-size: clamp(10px, 1.5vw, 12px); letter-spacing: 2px; text-transform: uppercase; }
+.hud-title { color: #fff; font-size: clamp(20px, 4vw, 28px); font-weight: 900; letter-spacing: 6px; margin-bottom: 5px; text-shadow: 0 0 20px var(--primary); transition: text-shadow 0.3s ease; }
+.hud-value { color: var(--primary); font-weight: bold; text-shadow: 0 0 10px var(--primary); transition: color 0.3s ease; }
+
+/* Merge Progress Bar */
+.progress-container { width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; position: relative; }
+.progress-bar { height: 100%; width: 0%; background: var(--primary); box-shadow: 0 0 10px var(--primary); transition: width 0.1s linear, background 0.3s ease; }
